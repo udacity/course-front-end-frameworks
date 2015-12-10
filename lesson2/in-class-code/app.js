@@ -17,3 +17,14 @@ var adder2 = new Function("num1", "num2", "return num1 + num2");
 
 adder1(1, 2);
 adder2(3, 4);
+
+
+function makeFun() {
+    return new Function('noun', "return noun[0].toUpperCase() + noun.slice(1) + ' is fun!'");
+}
+
+var isFun = makeFun();
+
+isFun('biking');
+isFun('climbing');
+isFun('broccoli');
