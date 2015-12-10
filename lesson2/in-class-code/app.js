@@ -19,11 +19,11 @@ adder1(1, 2); // 3
 adder2(3, 4); // 7
 
 
-function makeFun() {
-    return new Function('noun', "return noun[0].toUpperCase() + noun.slice(1) + ' is fun!'");
+function make(adjective) {
+    return new Function('noun', "return noun[0].toUpperCase() + noun.slice(1) + ' is " + adjective + "!'");
 }
 
-var isFun = makeFun();
+var isFun = make('fun');
 
 isFun('biking');      // 'Biking is fun!'
 isFun('climbing');    // 'Climbing is fun!'
