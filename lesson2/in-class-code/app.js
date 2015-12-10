@@ -15,8 +15,8 @@ var adder1 = function(num1, num2) {
 
 var adder2 = new Function("num1", "num2", "return num1 + num2");
 
-adder1(1, 2);
-adder2(3, 4);
+adder1(1, 2); // 3
+adder2(3, 4); // 7
 
 
 function makeFun() {
@@ -25,6 +25,6 @@ function makeFun() {
 
 var isFun = makeFun();
 
-isFun('biking');
-isFun('climbing');
-isFun('broccoli');
+isFun('biking');      // 'Biking is fun!'
+isFun('climbing');    // 'Climbing is fun!'
+isFun('broccoli');    // 'Broccoli is fun!'
