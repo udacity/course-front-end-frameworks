@@ -57,3 +57,11 @@ _.extend(jack, Backbone.Events);
 jack.on('birthday party presents', purchase);
 
 jack.on('presents', build);
+
+var owen = {};
+
+_.extend(owen, Backbone.Events);
+
+owen.on('presents', purchase);
+
+owen.on('birthday presents');
