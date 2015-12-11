@@ -36,3 +36,15 @@ var numLetters = function(letter) {
 var LotsOfAaas = numLetters('a');
 
 LotsOfAaas(4.3); // 'aaaa'
+
+
+var templateInfo = _.template($('#beach-supplies').html(), {variable: 'supplies'});
+
+jQuery('#beach-info').html(
+    templateInfo({
+        empty: false,
+        sunscreen: true,
+        towel: 'red'
+        // , shades: true
+    })
+);

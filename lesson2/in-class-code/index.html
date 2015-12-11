@@ -1,0 +1,15 @@
+<div id="beach-info"></div>
+
+<script type="text/template" id="beach-supplies">
+    <% if (supplies.empty) { %>
+        <p> Whaaaat? Get to the beach anyway! </p>
+    <% } %>
+
+    <ul>
+        <li> Sunscreen - <%  if (supplies.sunscreen) { %> check! <% } %> </li>
+        <% if (supplies.towel) { %>
+            <li> Towel - Yes, a <%= supplies.towel %> one! </li>
+        <% } %>
+        <li> Shades - <%  if (supplies.shades) { %> check! <% } else { %> sadly, no! <% } %></li>
+    </ul>
+</script>
