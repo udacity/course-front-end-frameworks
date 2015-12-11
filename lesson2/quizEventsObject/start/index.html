@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz - Real World Templates</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <br><br><br>
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <tbody>
+                <tr>
+                    <td>
+                        <pre><code>jack._events = {
+    purchase: [{data: purchase}],
+    presents: [
+        {callback: purchase},
+        {callback: build}
+    ]
+}</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>jack._events = {
+    birthday: [{callback: purchase}],
+    party: [{callback: purchase}],
+    presents: [
+        {callback: purchase},
+        {callback: build}
+    ]
+}</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre><code>jack._events = {
+    birthday: [{callback: purchase}],
+    party: [{callback: purchase}],
+    presents: [{callback: purchase}]
+}</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>jack._events = {
+    purchase: [birthday, party, presents],
+    build: [presents]
+}</code></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
