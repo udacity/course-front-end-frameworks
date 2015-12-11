@@ -48,3 +48,12 @@ jQuery('#beach-info').html(
         // , shades: true
     })
 );
+
+
+var jack = {};
+
+_.extend(jack, Backbone.Events);
+
+jack.on('birthday party presents', purchase);
+
+jack.on('presents', build);
