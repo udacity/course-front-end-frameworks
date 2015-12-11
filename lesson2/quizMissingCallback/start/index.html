@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz - Real World Templates</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <br><br><br>
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <tbody>
+                <tr>
+                    <td>
+                        <pre><code>owen._events = {
+    birthday: [{callback: ''}],
+    presents: [{callback: purchase}]
+}</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>owen._events = {
+    birthday: [{callback: ''}],
+    presents: [
+        {callback: purchase},
+        {callback: ''}
+    ]
+}</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre><code>owen._events = {
+    presents: [{callback: purchase}]
+}</code></pre>
+                    </td>
+                    <td>An error occurs</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
