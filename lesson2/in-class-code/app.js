@@ -65,3 +65,14 @@ _.extend(owen, Backbone.Events);
 owen.on('presents', purchase);
 
 owen.on('birthday presents');
+
+
+var jack = {};
+
+_.extend(jack, Backbone.Events);
+
+jack.on('birthday', function(presents) {
+    console.log('Buy a ' + presents);
+});
+
+jack.trigger('birthday', 'bicycle', 'sword', 'clarinet');
