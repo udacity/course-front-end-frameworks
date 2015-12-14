@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz - Real World Templates</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <br><br><br>
+    <div class="container">
+
+<pre><code>var MountainRouter = Backbone.Router.extend({
+    routes: {
+        '': 'home',
+        'mountain/:id': 'mountain',
+        'download/*brochure': 'downloadBrochure'
+    },
+
+    home: function(){ ... },
+    mountain: function(id) { ... },
+    downloadBrochure: function(brochure) { ... }
+});</code></pre>
+<br><br><br>
+
+        <table class="table table-bordered table-hover">
+            <tbody>
+                <tr>
+                    <td>
+                        <pre><code>Backbone.history.handlers == [
+    {
+        route: /^download\/([^?]*?)(?:\?([\s\S]*))?$/,
+        callback: function(fragment) { ... }
+    },
+    {
+        route: /^mountain\/([^\/?]+)(?:\?([\s\S]*))?$/,
+        callback: function(fragment) { ... }
+    },
+    {
+        route: /^(?:\?([\s\S]*))?$/,
+        callback: function(fragment) { ... }
+    }
+]</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>Backbone.history.handlers == [
+    {
+        route: /^(?:\?([\s\S]*))?$/,
+        callback: function() { ... }
+    },
+    {
+        route: /^mountain\/([^\/?]+)(?:\?([\s\S]*))?$/,
+        callback: function(id) { ... }
+    },
+    {
+        route: /^download\/([^?]*?)(?:\?([\s\S]*))?$/,
+        callback: function(brochure) { ... }
+    }
+]</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre><code>Backbone.history.handlers == [
+    {
+        route: /^(?:\?([\s\S]*))?$/,
+        callback: function(fragment) { ... }
+    },
+    {
+        route: /^mountain\/([^\/?]+)(?:\?([\s\S]*))?$/,
+        callback: function(fragment) { ... }
+    },
+    {
+        route: /^download\/([^?]*?)(?:\?([\s\S]*))?$/,
+        callback: function(fragment) { ... }
+    }
+]</code></pre>
+                    </td>
+                    <td>
+                        <pre><code>Backbone.history.handlers == [
+    {
+        route: /^download\/([^?]*?)(?:\?([\s\S]*))?$/,
+        callback: function(brochure) { ... }
+    },
+    {
+        route: /^mountain\/([^\/?]+)(?:\?([\s\S]*))?$/,
+        callback: function(id) { ... }
+    },
+    {
+        route: /^(?:\?([\s\S]*))?$/,
+        callback: function() { ... }
+    }
+]</code></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
