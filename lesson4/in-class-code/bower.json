@@ -1,0 +1,6 @@
+{
+  "name": "in-class-code",
+  "dependencies": {
+    "handlebars": "~4.0.5"
+  }
+}
