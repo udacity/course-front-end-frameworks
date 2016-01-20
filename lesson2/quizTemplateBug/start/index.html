@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz - Real World Templates</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div id="beach-info"></div>
+
+    <script type="text/template" id="beach-supplies">
+        <% if (supplies.empty) { %>
+            <p> Whaaaat? Get to the beach anyway! </p>
+        <% } %>
+
+        <ul>
+            <li> Sunscreen - <%  if (supplies.sunscreen) { %> check! <% } %> </li>
+            <% if (supplies.towel) { %>
+                <li> Towel - Yes, a <%= supplies.towel %> one! </li>
+            <% } %>
+            <li> Shades - <%  if (supplies.shades) { %> check! <% } else { %> sadly, no! <% } %></li>
+        </ul>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
