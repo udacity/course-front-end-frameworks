@@ -68,7 +68,11 @@ var template = function(text, options) {
 
     templateString = 'while(times--) { console.log(' + templateString.join( '+' ) + ')}';
 
-    return new Function( functionArguments.join( ',' ), 'times', templateString );
+    var functionArgs = functionArguments.length > 1 ? functionArguments.join( ',' ) : functionArguments;
+
+    if (functionArgs.length === 0) {  return; }
+
+    return new Function( functionArgs, 'times', templateString );
 };
 
 var string = "Hi, my name is Richard. And I *( emotion )* this *( thing )*!";
